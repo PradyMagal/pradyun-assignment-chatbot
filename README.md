@@ -12,13 +12,13 @@ A web-based tool that enables users to interact with AI models from OpenAI and A
 ## Project Structure
 
 - `server/`: Python Flask backend
-- `client/`: React frontend (to be implemented)
+- `client/`: React frontend 
 
 ## Setup
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.13+
 - Node.js and npm (for the client)
 - OpenAI API key
 - Anthropic API key
@@ -48,7 +48,7 @@ make install
 ```
 
 ## Running the Application
-
+Do these in a separate terminal
 ```bash
 # Start the server only
 make start-server
@@ -56,8 +56,6 @@ make start-server
 # Start the client only (when client is implemented)
 make start-client
 
-# Start both client and server
-make start
 ```
 
 ## API Endpoints
@@ -101,7 +99,13 @@ All API responses follow this format:
   "code": 200,
   "message": "success",
   "data": {
-    // Response data here
+      {
+      "code": 200,
+      "data": {
+          "status": "OK"
+      },
+      "message": "success"
+  }
   }
 }
 ```
